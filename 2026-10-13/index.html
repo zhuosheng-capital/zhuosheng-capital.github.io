@@ -724,6 +724,22 @@
         .lead-item .news-link-none { font-size: 0.7rem; }
         @media (max-width: 768px) { .lead-grid.lead-wide { grid-template-columns: 1fr; } }
 </style>
+    <style>
+        /* ===== 语音播报条（仅在存在音频时注入） ===== */
+        .hero-audio { max-width: 620px; margin: 24px auto 0; padding: 16px 20px 14px;
+                      background: #fff; border: 1px solid #e6e9ef; border-radius: 12px;
+                      box-shadow: 0 2px 8px rgba(0,0,0,0.06); text-align: left; }
+        .ha-head { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+        .ha-icon { font-size: 1.05rem; }
+        .ha-title { font-size: 0.92rem; font-weight: 700; color: #0f3460; }
+        .ha-dur { font-size: 0.78rem; color: #888; margin-left: auto; white-space: nowrap; }
+        .ha-player { width: 100%; height: 38px; display: block; }
+        .ha-note { margin: 8px 0 0; font-size: 0.74rem; color: #999; line-height: 1.6; }
+        @media (max-width: 700px) {
+            .hero-audio { margin-top: 18px; padding: 14px 14px 12px; }
+            .ha-player { height: 34px; }
+        }
+    </style>
 </head>
 <body>
 
@@ -745,6 +761,15 @@
             <span class="hero-chip">高股息与传媒逆势领涨</span>
         </div>
         </div>
+        </div>
+    
+        <div class="hero-audio">
+            <div class="ha-head"><span class="ha-icon">&#127911;</span><span class="ha-title">语音播报</span><span class="ha-dur">约 22 分钟</span></div>
+            <audio class="ha-player" controls preload="metadata">
+                <source src="/audio/2026-10-13.mp3" type="audio/mpeg" />
+                您的浏览器不支持音频播放，可改用图文版阅读。
+            </audio>
+            <p class="ha-note">本期要点语音版，内容与图文版一致。微信内需手动点击播放，建议在 Wi-Fi 环境下收听。</p>
         </div>
     </header>
 
